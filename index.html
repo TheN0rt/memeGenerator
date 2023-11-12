@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./src/styles/style.css">
+   <title>Document</title>
+</head>
+<body>
+   <div class="wrapper">
+      <h1>Генератор мемов</h1>
+      <div class="container">
+         <div class="flex">
+            <div class="left">
+               <label for="file-input">
+                  Выберите картинку для генерации
+                  <input type="file" id="file-input">
+               </label>
+               <div class="canvas-block">
+                  <canvas id="canvas"></canvas>
+               </div>
+            </div>
+            <div class="right">
+               <div class="color-block">
+                  <label for="">
+                     Красный:
+                     <input type="range" min="0" max="255" value="0" id="red">
+                  </label>
+                  <label for="">
+                     Зелёный:
+                     <input type="range" min="0" max="255" value="0" id="green">
+                  </label>
+                  <label for="">
+                     Синий:
+                     <input type="range" min="0" max="255" value="0" id="blue">
+                  </label>
+                  <input type="text" id="result" value="rgb(0,0,0)">
+                  <div class="color__default-block">
+                     <div class="color__default-item" data-type="white"></div>
+                     <div class="color__default-item" data-type="black"></div>
+                     <div class="color__default-item" data-type="red"></div>
+                     <div class="color__default-item" data-type="green"></div>
+                     <div class="color__default-item" data-type="blue"></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <button id="generate">Загрузить</button>
+      </div>
+   </div>
+   <script src="./src/js/imageValidation.js"></script>
+   <script src="./src/js/colorChange.js"></script>
+   <script src="./src/js/workWithCanvas.js"></script>
+   <script src="./src/js/script.js"></script>
+</body>
+</html>

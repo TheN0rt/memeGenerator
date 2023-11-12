@@ -1,0 +1,151 @@
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+.wrapper{
+   max-width: 1220px;
+   margin: 75px auto;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 40px;
+}
+
+.container{
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.flex{
+   display: flex;
+   gap: 40px;
+}
+
+.left{
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+
+.canvas-block{
+   position: relative;
+   min-width: 500px;
+   min-height: 500px;
+}
+
+.canvas-block input[type="text"]{
+   height: 30px;
+   outline: none;
+   border: none;
+   padding: 0 4px;
+}
+
+canvas{
+   border: 1px solid black;
+}
+
+.ctx-text{
+   /* padding: 5px; */
+   height: min-content;
+   margin: 0;
+   cursor: pointer;
+}
+
+.ctx-text.active{
+   border: 1px dashed gray;
+}
+
+.action-block{
+   display: none;
+   border: 1px solid gray;
+   width: min-content;
+}
+
+.ctx-text.active .action-block{
+   display: flex;
+   align-items: center;
+}
+
+.action__item{
+   display: none;
+   padding: 3px;
+   border-right: 1px solid gray;
+   width: 20px;
+   height: 20px;
+   cursor: pointer;
+   font-size: 16px;
+}
+
+.action__item > img{
+   width: 100%;
+   height: 100%;
+}
+
+.action__item > input{
+   width: 100%;
+}
+
+.ctx-text.active .action__item{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.action__item.active{
+   color: blue;
+   background-color: lightblue;
+}
+
+.action__item:nth-child(5){
+   width: 110px;
+}
+
+.action__item:last-child{
+   border-right: none;
+}
+
+button{
+   background-color: blue;
+   border: none;
+   border-radius: 10px;
+   color: white;
+   outline: none;
+   padding: 20px 40px;
+}
+
+.color-block{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 30px;
+   padding: 30px;
+   /* border: 1px solid black; */
+   margin-top: 100px;
+   border-radius: 10px;
+   -webkit-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+   -moz-box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+   box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
+}
+
+label{
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
+.color__default-block{
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.color__default-block .color__default-item{
+   width: 30px;
+   height: 30px;
+   border: 1px solid black;
+   cursor: pointer;
+}
